@@ -17,7 +17,7 @@ import net.sf.json.JSONObject;
 
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
@@ -203,7 +203,7 @@ public class LaceworkScannerBuilder extends Builder implements SimpleBuildStep {
         }
 
         @Override
-        public boolean configure(StaplerRequest req, JSONObject formData) throws FormException {
+        public boolean configure(StaplerRequest2 req, JSONObject formData) throws FormException {
             // To persist global configuration information,
             // set that to properties and call save().
             laceworkAccountName = formData.getString("laceworkAccountName");
