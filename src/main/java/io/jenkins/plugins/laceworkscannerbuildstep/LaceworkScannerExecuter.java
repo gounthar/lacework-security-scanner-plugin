@@ -1,6 +1,8 @@
 package io.jenkins.plugins.laceworkscannerbuildstep;
 
-import hudson.*;
+import hudson.EnvVars;
+import hudson.FilePath;
+import hudson.Launcher;
 import hudson.Launcher.ProcStarter;
 import hudson.util.ArgumentListBuilder;
 import java.io.File;
